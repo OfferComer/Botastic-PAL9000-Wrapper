@@ -3,4 +3,5 @@ WORKDIR /app
 COPY . .
 RUN CGO_ENABLED=0 go build -trimpath
 
-FROM
+FROM alpine:3.17
+WORKDIR /app
