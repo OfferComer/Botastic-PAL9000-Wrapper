@@ -5,3 +5,5 @@ RUN CGO_ENABLED=0 go build -trimpath
 
 FROM alpine:3.17
 WORKDIR /app
+COPY --from=builder /app/PAL9000 .
+ENTR
