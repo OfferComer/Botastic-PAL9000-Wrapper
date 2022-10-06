@@ -5,4 +5,5 @@ import (
 	"fmt"
 
 	"github.com/pandodao/PAL9000/config"
-	"github.com/pandodao
+	"github.com/pandodao/PAL9000/internal/discord"
+	"github.com/pandodao/PAL90
