@@ -8,4 +8,4 @@ import (
 	"github.com/pandodao/PAL9000/internal/discord"
 	"github.com/pandodao/PAL9000/internal/mixin"
 	"github.com/pandodao/PAL9000/internal/telegram"
-	"gi
+	"github.com/pandodao/PAL9000/internal/wecha
