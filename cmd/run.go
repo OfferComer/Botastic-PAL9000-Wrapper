@@ -17,4 +17,5 @@ import (
 
 type configKey struct{}
 
-// runCmd repres
+// runCmd represents the run command
+var runCmd = &cobra.Command
