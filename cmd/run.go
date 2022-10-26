@@ -20,4 +20,5 @@ type configKey struct{}
 // runCmd represents the run command
 var runCmd = &cobra.Command{
 	Use:   "run",
-	Short: "Run all b
+	Short: "Run all bots by config",
+	RunE: func(cmd *c
