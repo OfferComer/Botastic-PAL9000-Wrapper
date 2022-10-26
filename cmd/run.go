@@ -21,4 +21,5 @@ type configKey struct{}
 var runCmd = &cobra.Command{
 	Use:   "run",
 	Short: "Run all bots by config",
-	RunE: func(cmd *c
+	RunE: func(cmd *cobra.Command, args []string) error {
+		c
