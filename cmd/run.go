@@ -18,4 +18,6 @@ import (
 type configKey struct{}
 
 // runCmd represents the run command
-var runCmd = &cobra.Command
+var runCmd = &cobra.Command{
+	Use:   "run",
+	Short: "Run all b
