@@ -12,4 +12,9 @@ import (
 	"github.com/pandodao/PAL9000/service"
 	"github.com/pandodao/PAL9000/store"
 	"github.com/spf13/cobra"
-	"golang.org/x/sync/e
+	"golang.org/x/sync/errgroup"
+)
+
+type configKey struct{}
+
+// runCmd repres
