@@ -30,4 +30,4 @@ var runCmd = &cobra.Command{
 		ctx := cmd.Context()
 
 		startHandler := func(h *service.Handler, name string, adapterCfg config.AdapterConfig) error {
-			fmt.Printf("
+			fmt.Printf("Starting adapter, name: %s, driver:
