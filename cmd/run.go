@@ -29,4 +29,5 @@ var runCmd = &cobra.Command{
 		cmd.SetContext(context.WithValue(cmd.Context(), configKey{}, cfg))
 		ctx := cmd.Context()
 
-		startHandler := func(h *service.Handler, name string, adapterCfg config
+		startHandler := func(h *service.Handler, name string, adapterCfg config.AdapterConfig) error {
+			fmt.Printf("
