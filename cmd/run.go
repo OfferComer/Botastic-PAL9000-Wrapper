@@ -26,4 +26,4 @@ var runCmd = &cobra.Command{
 		if err != nil {
 			return err
 		}
-		cmd.Se
+		cmd.SetContext(context.WithValue(cmd.Context(), configKe
