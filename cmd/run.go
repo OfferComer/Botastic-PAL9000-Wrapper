@@ -26,4 +26,7 @@ var runCmd = &cobra.Command{
 		if err != nil {
 			return err
 		}
-		cmd.SetContext(context.WithValue(cmd.Context(), configKe
+		cmd.SetContext(context.WithValue(cmd.Context(), configKey{}, cfg))
+		ctx := cmd.Context()
+
+	
