@@ -23,4 +23,7 @@ var runCmd = &cobra.Command{
 	Short: "Run all bots by config",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		cfg, err := config.Init(cfgFile)
-		i
+		if err != nil {
+			return err
+		}
+		cmd.Se
