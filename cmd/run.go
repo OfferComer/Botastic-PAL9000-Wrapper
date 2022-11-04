@@ -31,3 +31,7 @@ var runCmd = &cobra.Command{
 
 		startHandler := func(h *service.Handler, name string, adapterCfg config.AdapterConfig) error {
 			fmt.Printf("Starting adapter, name: %s, driver: %s\n", name, adapterCfg.Driver)
+			return h.Start(ctx)
+		}
+
+		g := errgrou
