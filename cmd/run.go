@@ -35,4 +35,6 @@ var runCmd = &cobra.Command{
 		}
 
 		g := errgroup.Group{}
-		for _, name := range cfg.Adap
+		for _, name := range cfg.Adapters.Enabled {
+			name := name
+			adapter :
