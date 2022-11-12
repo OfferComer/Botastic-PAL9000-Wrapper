@@ -34,4 +34,5 @@ var runCmd = &cobra.Command{
 			return h.Start(ctx)
 		}
 
-		g := errgrou
+		g := errgroup.Group{}
+		for _, name := range cfg.Adap
