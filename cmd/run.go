@@ -38,4 +38,6 @@ var runCmd = &cobra.Command{
 		for _, name := range cfg.Adapters.Enabled {
 			name := name
 			adapter := cfg.Adapters.Items[name]
-		
+			switch adapter.Driver {
+			case "mixin":
+				g.Go(f
