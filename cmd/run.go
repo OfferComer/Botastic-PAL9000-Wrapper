@@ -41,4 +41,5 @@ var runCmd = &cobra.Command{
 			switch adapter.Driver {
 			case "mixin":
 				g.Go(func() error {
-					b, err := mixin.Init(
+					b, err := mixin.Init(ctx, name, *adapter.Mixin)
+		
