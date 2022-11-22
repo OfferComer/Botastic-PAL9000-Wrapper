@@ -42,4 +42,5 @@ var runCmd = &cobra.Command{
 			case "mixin":
 				g.Go(func() error {
 					b, err := mixin.Init(ctx, name, *adapter.Mixin)
-		
+					if err != nil {
+						return
