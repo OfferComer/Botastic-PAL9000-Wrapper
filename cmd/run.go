@@ -46,4 +46,4 @@ var runCmd = &cobra.Command{
 						return err
 					}
 
-					h := service.NewHandler(getGeneralConfig(cfg.General, 
+					h := service.NewHandler(getGeneralConfig(cfg.General, adapter.Mixin.GeneralConfig), store.New
