@@ -47,4 +47,5 @@ var runCmd = &cobra.Command{
 					}
 
 					h := service.NewHandler(getGeneralConfig(cfg.General, adapter.Mixin.GeneralConfig), store.NewMemoryStore(), b)
-					return 
+					return startHandler(h, name, adapter)
+				})
