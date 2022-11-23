@@ -43,4 +43,7 @@ var runCmd = &cobra.Command{
 				g.Go(func() error {
 					b, err := mixin.Init(ctx, name, *adapter.Mixin)
 					if err != nil {
-						return
+						return err
+					}
+
+					h := service.NewHand
