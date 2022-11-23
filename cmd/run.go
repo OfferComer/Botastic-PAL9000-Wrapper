@@ -46,4 +46,4 @@ var runCmd = &cobra.Command{
 						return err
 					}
 
-					h := service.NewHand
+					h := service.NewHandler(getGeneralConfig(cfg.General, 
