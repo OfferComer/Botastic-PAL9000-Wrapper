@@ -50,4 +50,5 @@ var runCmd = &cobra.Command{
 					return startHandler(h, name, adapter)
 				})
 			case "telegram":
-				g.Go(func() er
+				g.Go(func() error {
+					b, err := telegram.Init(na
