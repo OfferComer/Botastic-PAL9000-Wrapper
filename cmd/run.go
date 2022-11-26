@@ -53,4 +53,7 @@ var runCmd = &cobra.Command{
 				g.Go(func() error {
 					b, err := telegram.Init(name, *adapter.Telegram)
 					if err != nil {
-			
+						return err
+					}
+
+					h := servi
