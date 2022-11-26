@@ -51,4 +51,6 @@ var runCmd = &cobra.Command{
 				})
 			case "telegram":
 				g.Go(func() error {
-					b, err := telegram.Init(na
+					b, err := telegram.Init(name, *adapter.Telegram)
+					if err != nil {
+			
