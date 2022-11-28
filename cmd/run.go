@@ -57,4 +57,6 @@ var runCmd = &cobra.Command{
 					}
 
 					h := service.NewHandler(getGeneralConfig(cfg.General, adapter.Telegram.GeneralConfig), store.NewMemoryStore(), b)
-					return star
+					return startHandler(h, name, adapter)
+				})
+			ca
