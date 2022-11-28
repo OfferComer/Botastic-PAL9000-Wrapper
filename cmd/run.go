@@ -59,4 +59,6 @@ var runCmd = &cobra.Command{
 					h := service.NewHandler(getGeneralConfig(cfg.General, adapter.Telegram.GeneralConfig), store.NewMemoryStore(), b)
 					return startHandler(h, name, adapter)
 				})
-			ca
+			case "discord":
+				g.Go(func() error {
+					
