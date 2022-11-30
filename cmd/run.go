@@ -61,4 +61,4 @@ var runCmd = &cobra.Command{
 				})
 			case "discord":
 				g.Go(func() error {
-					
+					b := discord.New(name, *adapter.Di
