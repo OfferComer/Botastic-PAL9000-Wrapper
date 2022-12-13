@@ -62,4 +62,5 @@ var runCmd = &cobra.Command{
 			case "discord":
 				g.Go(func() error {
 					b := discord.New(name, *adapter.Discord)
-					h := service.NewHandler(getGeneralConfig(cfg.General, adapter.Discord.
+					h := service.NewHandler(getGeneralConfig(cfg.General, adapter.Discord.GeneralConfig), store.NewMemoryStore(), b)
+					r
