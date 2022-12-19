@@ -64,3 +64,6 @@ var runCmd = &cobra.Command{
 					b := discord.New(name, *adapter.Discord)
 					h := service.NewHandler(getGeneralConfig(cfg.General, adapter.Discord.GeneralConfig), store.NewMemoryStore(), b)
 					return startHandler(h, name, adapter)
+				})
+			case "wechat":
+				g.Go
