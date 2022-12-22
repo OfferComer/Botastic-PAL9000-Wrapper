@@ -67,4 +67,5 @@ var runCmd = &cobra.Command{
 				})
 			case "wechat":
 				g.Go(func() error {
-					b := wechat.New(name, *adapter.W
+					b := wechat.New(name, *adapter.WeChat)
+					h := service.NewHandler(getGen
