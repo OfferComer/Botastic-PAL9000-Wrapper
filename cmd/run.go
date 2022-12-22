@@ -66,4 +66,5 @@ var runCmd = &cobra.Command{
 					return startHandler(h, name, adapter)
 				})
 			case "wechat":
-				g.Go
+				g.Go(func() error {
+					b :
