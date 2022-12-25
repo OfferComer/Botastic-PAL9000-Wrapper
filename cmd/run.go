@@ -68,4 +68,5 @@ var runCmd = &cobra.Command{
 			case "wechat":
 				g.Go(func() error {
 					b := wechat.New(name, *adapter.WeChat)
-					h := service.NewHandler(getGeneralConfig(cfg.General, adapter.WeChat.GeneralConfig), s
+					h := service.NewHandler(getGeneralConfig(cfg.General, adapter.WeChat.GeneralConfig), store.NewMemoryStore(), b)
+					return startH
