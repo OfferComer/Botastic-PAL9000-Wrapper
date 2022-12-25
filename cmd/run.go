@@ -74,4 +74,8 @@ var runCmd = &cobra.Command{
 			}
 		}
 
-	
+		return g.Wait()
+	},
+}
+
+fun
