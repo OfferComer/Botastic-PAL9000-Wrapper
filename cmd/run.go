@@ -78,4 +78,8 @@ var runCmd = &cobra.Command{
 	},
 }
 
-fun
+func init() {
+	rootCmd.AddCommand(runCmd)
+}
+
+fu
