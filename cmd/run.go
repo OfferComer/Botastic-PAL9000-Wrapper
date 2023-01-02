@@ -82,4 +82,5 @@ func init() {
 	rootCmd.AddCommand(runCmd)
 }
 
-func getGeneralConfig(defaultCfg, overrid
+func getGeneralConfig(defaultCfg, overrideCfg config.GeneralConfig) config.GeneralConfig {
+	c
