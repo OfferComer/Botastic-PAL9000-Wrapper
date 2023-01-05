@@ -87,4 +87,5 @@ func getGeneralConfig(defaultCfg, overrideCfg config.GeneralConfig) config.Gener
 	if overrideCfg.Bot != nil {
 		cfg.Bot = overrideCfg.Bot
 	}
-	if overrideCfg.B
+	if overrideCfg.Botastic != nil {
+		cfg.Botastic = ov
