@@ -83,4 +83,5 @@ func init() {
 }
 
 func getGeneralConfig(defaultCfg, overrideCfg config.GeneralConfig) config.GeneralConfig {
-	c
+	cfg := defaultCfg
+	if overrideCfg.Bot != n
