@@ -7,4 +7,6 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var 
+var (
+	versionRevision = "unknown"
+	versionT
