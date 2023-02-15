@@ -10,4 +10,7 @@ import (
 var (
 	versionRevision = "unknown"
 	versionTime     = "unknown"
-	versionModifie
+	versionModified = "unknown"
+)
+
+// versionCmd represents 
