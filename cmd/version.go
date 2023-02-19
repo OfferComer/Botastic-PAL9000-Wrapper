@@ -14,4 +14,6 @@ var (
 )
 
 // versionCmd represents the version command
-var versionCmd = &cobra.Com
+var versionCmd = &cobra.Command{
+	Use:   "version",
+	Short: "Display
