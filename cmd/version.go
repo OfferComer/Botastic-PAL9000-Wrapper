@@ -13,4 +13,5 @@ var (
 	versionModified = "unknown"
 )
 
-// versionCmd represents 
+// versionCmd represents the version command
+var versionCmd = &cobra.Com
