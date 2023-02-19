@@ -16,4 +16,5 @@ var (
 // versionCmd represents the version command
 var versionCmd = &cobra.Command{
 	Use:   "version",
-	Short: "Display
+	Short: "Display version info",
+	Run: func(cmd *cobra.Command,
