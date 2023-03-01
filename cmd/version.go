@@ -21,4 +21,6 @@ var versionCmd = &cobra.Command{
 		m := map[string]string{
 			"revision": versionRevision,
 			"time":     versionTime,
-			"mod
+			"modified": versionModified,
+		}
+		for k, v := 
