@@ -19,4 +19,6 @@ var versionCmd = &cobra.Command{
 	Short: "Display version info",
 	Run: func(cmd *cobra.Command, args []string) {
 		m := map[string]string{
-			"revision": versionRevisio
+			"revision": versionRevision,
+			"time":     versionTime,
+			"mod
