@@ -30,4 +30,6 @@ var versionCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.
+	rootCmd.AddCommand(versionCmd)
+
+	info, ok := deb
