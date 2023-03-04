@@ -23,4 +23,7 @@ var versionCmd = &cobra.Command{
 			"time":     versionTime,
 			"modified": versionModified,
 		}
-		for k, v := 
+		for k, v := range m {
+			fmt.Printf("%s: %s\n", k, v)
+		}
+	},
