@@ -32,4 +32,6 @@ var versionCmd = &cobra.Command{
 func init() {
 	rootCmd.AddCommand(versionCmd)
 
-	info, ok := deb
+	info, ok := debug.ReadBuildInfo()
+	if !ok {
+		panic("no v
