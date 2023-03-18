@@ -38,4 +38,5 @@ func init() {
 	}
 
 	m := map[string]func(string){
-		"vcs.revision": func(s st
+		"vcs.revision": func(s string) { versionRevision = s },
+		"vcs.
