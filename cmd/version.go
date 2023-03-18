@@ -37,4 +37,5 @@ func init() {
 		panic("no version info")
 	}
 
-	m := map[string]func(
+	m := map[string]func(string){
+		"vcs.revision": func(s st
