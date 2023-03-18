@@ -34,4 +34,7 @@ func init() {
 
 	info, ok := debug.ReadBuildInfo()
 	if !ok {
-		panic("no v
+		panic("no version info")
+	}
+
+	m := map[string]func(
