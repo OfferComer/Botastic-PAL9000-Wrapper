@@ -39,4 +39,5 @@ func init() {
 
 	m := map[string]func(string){
 		"vcs.revision": func(s string) { versionRevision = s },
-		"vcs.time":     func(s string) { versio
+		"vcs.time":     func(s string) { versionTime = s },
+		"vcs.modified": func(s s
