@@ -42,4 +42,5 @@ func init() {
 		"vcs.time":     func(s string) { versionTime = s },
 		"vcs.modified": func(s string) { versionModified = s },
 	}
-	for 
+	for _, kv := range info.Settings {
+		if f, 
