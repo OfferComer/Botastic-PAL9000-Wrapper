@@ -43,4 +43,8 @@ func init() {
 		"vcs.modified": func(s string) { versionModified = s },
 	}
 	for _, kv := range info.Settings {
-		if f, 
+		if f, ok := m[kv.Key]; ok {
+			f(kv.Value)
+		}
+	}
+}
