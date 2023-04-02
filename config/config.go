@@ -47,3 +47,44 @@ type AdaptersConfig struct {
 
 type AdapterConfig struct {
 	Driver   string          `yaml:"driver"`
+	Mixin    *MixinConfig    `yaml:"mixin,omitempty"`
+	Telegram *TelegramConfig `yaml:"telegram,omitempty"`
+	Discord  *DiscordConfig  `yaml:"discord,omitempty"`
+	WeChat   *WeChatConfig   `yaml:"wechat,omitempty"`
+}
+
+type WeChatConfig struct {
+	GeneralConfig `yaml:",inline"`
+
+	Address string `yaml:"address"`
+	Path    string `yaml:"path"`
+	Token   string `yaml:"token"`
+}
+
+type MixinConfig struct {
+	GeneralConfig `yaml:",inline"`
+
+	Keystore               string   `yaml:"keystore"` // base64 encoded keystore (json format)
+	Whitelist              []string `yaml:"whitelist"`
+	MessageCacheExpiration int64    `yaml:"message_cache_expiration"`
+}
+
+type TelegramConfig struct {
+	GeneralConfig `yaml:",inline"`
+
+	Debug     bool     `yaml:"debug"`
+	Token     string   `yaml:"token"`
+	Whitelist []string `yaml:"whitelist"`
+}
+
+type DiscordConfig struct {
+	GeneralConfig `yaml:",inline"`
+
+	Token     string   `yaml:"token"`
+	Whitelist []string `yaml:"whitelist"`
+}
+
+func DefaultConfig() *Config {
+	return &Config{
+		General: GeneralConfig{
+			Options: &GeneralOptionsConfig{
