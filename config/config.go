@@ -164,3 +164,36 @@ func (c Config) validate() error {
 		if _, ok := c.Adapters.Items[name]; !ok {
 			return fmt.Errorf("adapter not found: %s", name)
 		}
+	}
+	for name, c := range c.Adapters.Items {
+		switch c.Driver {
+		case "mixin":
+			if c.Mixin == nil {
+				return fmt.Errorf("config not found, name: %s, driver: %s", name, c.Driver)
+			}
+		case "telegram":
+			if c.Telegram == nil {
+				return fmt.Errorf("config not found, name: %s, driver: %s", name, c.Driver)
+			}
+		case "discord":
+			if c.Discord == nil {
+				return fmt.Errorf("config not found, name: %s, driver: %s", name, c.Driver)
+			}
+		case "wechat":
+			if c.WeChat == nil {
+				return fmt.Errorf("config not found, name: %s, driver: %s", name, c.Driver)
+			}
+		default:
+			return fmt.Errorf("invalid driver, name: %s, driver: %s", name, c.Driver)
+		}
+	}
+	return nil
+}
+
+func Init(fp string) (*Config, error) {
+	c := DefaultConfig()
+
+	data, err := ioutil.ReadFile(fp)
+	if err != nil {
+		return nil, fmt.Errorf("ioutil.ReadFile error: %w", err)
+	}
