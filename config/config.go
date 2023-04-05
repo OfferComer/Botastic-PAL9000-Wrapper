@@ -126,3 +126,41 @@ func ExampleConfig() *Config {
 					Telegram: &TelegramConfig{
 						Debug:     true,
 						Token:     "1234567890:ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+						Whitelist: []string{"-10540154212", "xx"},
+						GeneralConfig: GeneralConfig{
+							Bot: &BotConfig{
+								BotID: 2,
+								Lang:  "zh",
+							},
+							Botastic: &BotasticConfig{
+								AppId: "cab1582e-9c30-4d1e-9246-a5c80f74f8f9",
+								Host:  "https://botastic-api.pando.im",
+							},
+						},
+					},
+				},
+				"test_discord": {
+					Driver: "discord",
+					Discord: &DiscordConfig{
+						Token:     "1234567890",
+						Whitelist: []string{"1093104389113266186"},
+					},
+				},
+				"test_wechat": {
+					Driver: "wechat",
+					WeChat: &WeChatConfig{
+						Address: ":8080",
+						Path:    "/wechat",
+						Token:   "123456",
+					},
+				},
+			},
+		},
+	}
+}
+
+func (c Config) validate() error {
+	for _, name := range c.Adapters.Enabled {
+		if _, ok := c.Adapters.Items[name]; !ok {
+			return fmt.Errorf("adapter not found: %s", name)
+		}
