@@ -88,3 +88,41 @@ func DefaultConfig() *Config {
 	return &Config{
 		General: GeneralConfig{
 			Options: &GeneralOptionsConfig{
+				IgnoreIfError: true,
+			},
+			Bot: &BotConfig{
+				Lang: "en",
+			},
+		},
+	}
+}
+
+func ExampleConfig() *Config {
+	return &Config{
+		General: GeneralConfig{
+			Bot: &BotConfig{
+				BotID: 1,
+				Lang:  "en",
+			},
+			Botastic: &BotasticConfig{
+				AppId: "cab1582e-9c30-4d1e-9246-a5c80f74f8f9",
+				Host:  "https://botastic-api.pando.im",
+				Debug: true,
+			},
+		},
+		Adapters: AdaptersConfig{
+			Enabled: []string{"test_mixin", "test_telegram", "test_discord", "test_wechat"},
+			Items: map[string]AdapterConfig{
+				"test_mixin": {
+					Driver: "mixin",
+					Mixin: &MixinConfig{
+						Keystore:               "base64 encoded keystore",
+						Whitelist:              []string{"7000104111", "a8d4e38e-9317-4529-8ca9-4289d4668111"},
+						MessageCacheExpiration: 60 * 60 * 24,
+					},
+				},
+				"test_telegram": {
+					Driver: "telegram",
+					Telegram: &TelegramConfig{
+						Debug:     true,
+						Token:     "1234567890:ABCDEFGHIJKLMNOPQRSTUVWXYZ",
