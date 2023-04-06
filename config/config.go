@@ -197,3 +197,14 @@ func Init(fp string) (*Config, error) {
 	if err != nil {
 		return nil, fmt.Errorf("ioutil.ReadFile error: %w", err)
 	}
+
+	if err := yaml.Unmarshal(data, c); err != nil {
+		return nil, fmt.Errorf("yaml.Unmarshal error: %w", err)
+	}
+
+	if err := c.validate(); err != nil {
+		return nil, fmt.Errorf("validate error: %w", err)
+	}
+
+	return c, nil
+}
