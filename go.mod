@@ -10,3 +10,5 @@ require (
 	github.com/pandodao/botastic-go v0.0.2
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/sirupsen/logrus v1.9.0
+	github.com/spf13/cobra v1.6.1
+	gol
