@@ -12,4 +12,8 @@ require (
 	github.com/sirupsen/logrus v1.9.0
 	github.com/spf13/cobra v1.6.1
 	golang.org/x/sync v0.2.0
-	gopkg.in/yaml.v3
+	gopkg.in/yaml.v3 v3.0.1
+)
+
+require (
+	filippo.io/edwar
