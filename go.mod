@@ -16,4 +16,5 @@ require (
 )
 
 require (
-	filippo.io/edwar
+	filippo.io/edwards25519 v1.0.0 // indirect
+	github.co
