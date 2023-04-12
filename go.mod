@@ -17,4 +17,4 @@ require (
 
 require (
 	filippo.io/edwards25519 v1.0.0 // indirect
-	github.co
+	github.com/btcsuite/btcutil v1.0.3-0.20201208143702-
