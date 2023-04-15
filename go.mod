@@ -21,4 +21,4 @@ require (
 	github.com/fox-one/msgpack v1.0.0 // indirect
 	github.com/go-resty/resty/v2 v2.7.0 // indirect
 	github.com/gofrs/uuid v4.4.0+incompatible // indirect
-	github.com/golang-j
+	github.com/golang-jwt/jwt v3.2.2+incompatible // indirect
