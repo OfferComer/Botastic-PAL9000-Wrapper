@@ -23,4 +23,5 @@ require (
 	github.com/gofrs/uuid v4.4.0+incompatible // indirect
 	github.com/golang-jwt/jwt v3.2.2+incompatible // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
-	github.com/gorilla/w
+	github.com/gorilla/websocket v1.5.0 // indirect
+	g
