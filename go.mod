@@ -24,4 +24,5 @@ require (
 	github.com/golang-jwt/jwt v3.2.2+incompatible // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/gorilla/websocket v1.5.0 // indirect
-	github.com/inconshreveable/mousetr
+	github.com/inconshreveable/mousetrap v1.0.1 // indirect
+	github.com/klauspost
