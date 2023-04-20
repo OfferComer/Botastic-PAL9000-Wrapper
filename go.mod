@@ -30,3 +30,5 @@ require (
 	github.com/shopspring/decimal v1.3.1 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/vmihailenco/tagparser v0.1.2 // indirect
+	github.com/zeebo/blake3 v0.2.3 // indirect
+	go
