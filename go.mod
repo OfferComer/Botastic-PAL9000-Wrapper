@@ -32,4 +32,4 @@ require (
 	github.com/vmihailenco/tagparser v0.1.2 // indirect
 	github.com/zeebo/blake3 v0.2.3 // indirect
 	golang.org/x/crypto v0.9.0 // indirect
-	gol
+	golang.org/x/net v0.10.0 // indirect
