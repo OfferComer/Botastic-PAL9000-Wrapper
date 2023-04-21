@@ -33,4 +33,5 @@ require (
 	github.com/zeebo/blake3 v0.2.3 // indirect
 	golang.org/x/crypto v0.9.0 // indirect
 	golang.org/x/net v0.10.0 // indirect
-	golang.org/x/sys v0.8.0 // indire
+	golang.org/x/sys v0.8.0 // indirect
+	google.golang.org/appengine v1
