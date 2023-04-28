@@ -104,3 +104,18 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 }
 
 func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
+	if r.Err != nil && r.IgnoreIfError {
+		return
+	}
+	text := ""
+	if r.Err != nil {
+		text = r.Err.Error()
+	} else {
+		text = r.ConvTurn.Response
+	}
+	msg := req.Context.Value(messageKey{}).(*discordgo.MessageCreate)
+	s := req.Context.Value(sessionKey{}).(*discordgo.Session)
+	if _, err := s.ChannelMessageSend(msg.ChannelID, text); err != nil {
+		log.Printf("error sending message to Discord, %v\n", err)
+	}
+}
