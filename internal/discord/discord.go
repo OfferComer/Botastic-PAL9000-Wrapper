@@ -55,3 +55,52 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 				break
 			}
 		}
+
+		if !allowed {
+			return
+		}
+
+		prefix := fmt.Sprintf("<@%s>", s.State.User.ID)
+
+		if m.GuildID != "" {
+			// return if not mentioned or not reply to bot
+			if !(strings.HasPrefix(m.Content, prefix) || (m.ReferencedMessage != nil && m.ReferencedMessage.Author.ID == s.State.User.ID)) {
+				return
+			}
+		}
+
+		replyContent := ""
+		if m.ReferencedMessage != nil {
+			replyContent = m.ReferencedMessage.Content
+		}
+
+		content := strings.TrimSpace(strings.TrimPrefix(m.Content, prefix))
+		ctx = context.WithValue(ctx, messageKey{}, m)
+		ctx = context.WithValue(ctx, sessionKey{}, s)
+
+		msgChan <- &service.Message{
+			Context:      ctx,
+			ReplyContent: replyContent,
+			UserIdentity: m.Author.ID,
+			Content:      content,
+			ConvKey:      m.ChannelID,
+		}
+	})
+
+	go func() {
+		if err := dg.Open(); err != nil {
+			log.Printf("error opening connection to Discord, %v\n", err)
+		}
+
+		select {
+		case <-ctx.Done():
+			dg.Close()
+			close(msgChan)
+			return
+		}
+	}()
+
+	return msgChan
+}
+
+func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
