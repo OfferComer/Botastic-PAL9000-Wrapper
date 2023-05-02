@@ -19,4 +19,8 @@ import (
 
 type Message struct {
 	Content string
-	Use
+	UserID  string
+}
+
+type (
+	messageKey str
