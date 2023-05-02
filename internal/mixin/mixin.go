@@ -16,3 +16,7 @@ import (
 	"github.com/patrickmn/go-cache"
 	"github.com/sirupsen/logrus"
 )
+
+type Message struct {
+	Content string
+	Use
