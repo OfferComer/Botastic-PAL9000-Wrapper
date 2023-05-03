@@ -25,4 +25,7 @@ type Message struct {
 type (
 	messageKey struct{}
 	userKey    struct{}
-	convKey   
+	convKey    struct{}
+)
+
+var _ service.Adapter = (*Bot)(
