@@ -32,4 +32,5 @@ var _ service.Adapter = (*Bot)(nil)
 
 type Bot struct {
 	name    string
-	
+	convMap map[string]*mixin.Conversation
+	userMap map[
