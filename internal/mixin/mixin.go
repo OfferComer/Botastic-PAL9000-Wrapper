@@ -28,4 +28,8 @@ type (
 	convKey    struct{}
 )
 
-var _ service.Adapter = (*Bot)(
+var _ service.Adapter = (*Bot)(nil)
+
+type Bot struct {
+	name    string
+	
