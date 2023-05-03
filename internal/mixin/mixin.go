@@ -23,4 +23,6 @@ type Message struct {
 }
 
 type (
-	messageKey str
+	messageKey struct{}
+	userKey    struct{}
+	convKey   
