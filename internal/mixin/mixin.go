@@ -36,4 +36,5 @@ type Bot struct {
 	userMap map[string]*mixin.User
 
 	client       *mixin.Client
-	msgChan      chan *service.M
+	msgChan      chan *service.Message
+	me           *mixin.Us
