@@ -39,4 +39,5 @@ type Bot struct {
 	msgChan      chan *service.Message
 	me           *mixin.User
 	cfg          config.MixinConfig
-	l
+	logger       logrus.FieldLogger
+	messageCache 
