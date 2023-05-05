@@ -37,4 +37,6 @@ type Bot struct {
 
 	client       *mixin.Client
 	msgChan      chan *service.Message
-	me           *mixin.Us
+	me           *mixin.User
+	cfg          config.MixinConfig
+	l
