@@ -43,4 +43,4 @@ type Bot struct {
 	messageCache *cache.Cache
 }
 
-func Init(ctx context.Con
+func Init(ctx context.Context, name string, cfg config.MixinCo
