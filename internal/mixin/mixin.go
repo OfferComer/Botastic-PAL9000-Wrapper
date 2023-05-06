@@ -43,4 +43,5 @@ type Bot struct {
 	messageCache *cache.Cache
 }
 
-func Init(ctx context.Context, name string, cfg config.MixinCo
+func Init(ctx context.Context, name string, cfg config.MixinConfig) (*Bot, error) {
+	data, err := b
