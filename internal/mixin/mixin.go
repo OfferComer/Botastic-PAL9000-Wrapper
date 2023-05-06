@@ -40,4 +40,7 @@ type Bot struct {
 	me           *mixin.User
 	cfg          config.MixinConfig
 	logger       logrus.FieldLogger
-	messageCache 
+	messageCache *cache.Cache
+}
+
+func Init(ctx context.Con
