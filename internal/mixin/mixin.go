@@ -44,4 +44,6 @@ type Bot struct {
 }
 
 func Init(ctx context.Context, name string, cfg config.MixinConfig) (*Bot, error) {
-	data, err := base64.StdEncoding.DecodeString(cfg.Keystore
+	data, err := base64.StdEncoding.DecodeString(cfg.Keystore)
+	if err != nil {
+		return nil, fmt.Error
