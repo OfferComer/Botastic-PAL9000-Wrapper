@@ -50,4 +50,4 @@ func Init(ctx context.Context, name string, cfg config.MixinConfig) (*Bot, error
 	}
 
 	var keystore mixin.Keystore
-	i
+	if err := json.Unmarshal(data, &keystore); err
