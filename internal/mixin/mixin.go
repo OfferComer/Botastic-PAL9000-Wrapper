@@ -48,3 +48,6 @@ func Init(ctx context.Context, name string, cfg config.MixinConfig) (*Bot, error
 	if err != nil {
 		return nil, fmt.Errorf("base64 decode keystore error: %w", err)
 	}
+
+	var keystore mixin.Keystore
+	i
