@@ -54,4 +54,5 @@ func Init(ctx context.Context, name string, cfg config.MixinConfig) (*Bot, error
 		return nil, fmt.Errorf("json unmarshal keystore error: %w", err)
 	}
 
-	client, err := mixin.NewFr
+	client, err := mixin.NewFromKeystore(&keystore)
+	if err != nil {
