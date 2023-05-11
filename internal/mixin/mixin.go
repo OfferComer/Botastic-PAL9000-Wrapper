@@ -56,3 +56,4 @@ func Init(ctx context.Context, name string, cfg config.MixinConfig) (*Bot, error
 
 	client, err := mixin.NewFromKeystore(&keystore)
 	if err != nil {
+		return nil, fmt.Errorf("mixin.NewFrom
