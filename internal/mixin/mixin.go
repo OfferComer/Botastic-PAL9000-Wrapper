@@ -59,4 +59,6 @@ func Init(ctx context.Context, name string, cfg config.MixinConfig) (*Bot, error
 		return nil, fmt.Errorf("mixin.NewFromKeystore error: %w", err)
 	}
 
-	me, err :=
+	me, err := client.UserMe(ctx)
+	if err != nil {
+		re
