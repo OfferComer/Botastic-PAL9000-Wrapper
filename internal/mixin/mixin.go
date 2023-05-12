@@ -61,4 +61,4 @@ func Init(ctx context.Context, name string, cfg config.MixinConfig) (*Bot, error
 
 	me, err := client.UserMe(ctx)
 	if err != nil {
-		re
+		return nil, fmt.Errorf("mixinClient.UserMe
