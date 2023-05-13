@@ -64,4 +64,5 @@ func Init(ctx context.Context, name string, cfg config.MixinConfig) (*Bot, error
 		return nil, fmt.Errorf("mixinClient.UserMe error: %w", err)
 	}
 
-	if cfg
+	if cfg.MessageCacheExpiration == 0 {
+		cfg.Messa
