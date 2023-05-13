@@ -65,4 +65,7 @@ func Init(ctx context.Context, name string, cfg config.MixinConfig) (*Bot, error
 	}
 
 	if cfg.MessageCacheExpiration == 0 {
-		cfg.Messa
+		cfg.MessageCacheExpiration = 60 * 60 * 24
+	}
+
+	
