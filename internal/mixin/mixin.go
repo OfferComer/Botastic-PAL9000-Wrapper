@@ -68,4 +68,6 @@ func Init(ctx context.Context, name string, cfg config.MixinConfig) (*Bot, error
 		cfg.MessageCacheExpiration = 60 * 60 * 24
 	}
 
-	
+	return &Bot{
+		name:         name,
+		convMap
