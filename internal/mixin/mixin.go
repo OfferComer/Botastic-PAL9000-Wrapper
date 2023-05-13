@@ -70,4 +70,4 @@ func Init(ctx context.Context, name string, cfg config.MixinConfig) (*Bot, error
 
 	return &Bot{
 		name:         name,
-		convMap
+		convMap:      make(map[string]*mixin.Conversation
