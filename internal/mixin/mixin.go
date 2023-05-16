@@ -73,4 +73,5 @@ func Init(ctx context.Context, name string, cfg config.MixinConfig) (*Bot, error
 		convMap:      make(map[string]*mixin.Conversation),
 		userMap:      make(map[string]*mixin.User),
 		client:       client,
-		msgChan
+		msgChan:      make(chan *service.Message),
+		cfg:          cf
