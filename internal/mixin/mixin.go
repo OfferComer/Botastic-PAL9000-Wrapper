@@ -76,4 +76,4 @@ func Init(ctx context.Context, name string, cfg config.MixinConfig) (*Bot, error
 		msgChan:      make(chan *service.Message),
 		cfg:          cfg,
 		me:           me,
-		logger:    
+		logger:       logrus.WithField("adapter", "mixin").With
