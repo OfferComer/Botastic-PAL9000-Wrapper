@@ -77,4 +77,8 @@ func Init(ctx context.Context, name string, cfg config.MixinConfig) (*Bot, error
 		cfg:          cfg,
 		me:           me,
 		logger:       logrus.WithField("adapter", "mixin").WithField("name", name),
-		messageCache: cache.New(time.Duration(cfg.MessageCacheExpiration)*time.Second, 10*ti
+		messageCache: cache.New(time.Duration(cfg.MessageCacheExpiration)*time.Second, 10*time.Minute),
+	}, nil
+}
+
+func
