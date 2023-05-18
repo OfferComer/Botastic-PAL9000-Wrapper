@@ -81,4 +81,5 @@ func Init(ctx context.Context, name string, cfg config.MixinConfig) (*Bot, error
 	}, nil
 }
 
-func
+func (b *Bot) GetName() string {
+	return b.na
