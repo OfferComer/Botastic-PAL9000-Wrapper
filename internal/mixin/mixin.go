@@ -82,4 +82,7 @@ func Init(ctx context.Context, name string, cfg config.MixinConfig) (*Bot, error
 }
 
 func (b *Bot) GetName() string {
-	return b.na
+	return b.name
+}
+
+func (b *Bot) GetMessageCha
