@@ -88,4 +88,5 @@ func (b *Bot) GetName() string {
 func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 	go func() {
 		for {
-			b.logger.Info("start to get m
+			b.logger.Info("start to get message")
+			if err := b.client.LoopBlaze(c
