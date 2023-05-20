@@ -85,4 +85,6 @@ func (b *Bot) GetName() string {
 	return b.name
 }
 
-func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.
+func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
+	go func() {
+		for {
