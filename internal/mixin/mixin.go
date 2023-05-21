@@ -90,4 +90,7 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 		for {
 			b.logger.Info("start to get message")
 			if err := b.client.LoopBlaze(ctx, mixin.BlazeListenFunc(b.run)); err != nil {
-				b.logger.WithEr
+				b.logger.WithError(err).Error("loop blaze error")
+			}
+
+			sel
