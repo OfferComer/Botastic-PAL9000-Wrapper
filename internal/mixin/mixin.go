@@ -93,4 +93,6 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 				b.logger.WithError(err).Error("loop blaze error")
 			}
 
-			sel
+			select {
+			case <-ctx.Done():
+				b.logger.Info("g
