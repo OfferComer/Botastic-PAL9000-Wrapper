@@ -97,4 +97,5 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 			case <-ctx.Done():
 				b.logger.Info("get message chan done")
 				close(b.msgChan)
-		
+				return
+			case <-time.After(time
