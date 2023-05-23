@@ -106,4 +106,5 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 	return b.msgChan
 }
 
-func (b *Bot) HandleResult(req *servi
+func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
+	defer clos
