@@ -111,4 +111,4 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 
 	b.logger.WithField("result", r).Info("get result")
 	if r.Err != nil && r.IgnoreIfError {
-		b.logge
+		b.logger.WithError(r.Err).Error("ignore error"
