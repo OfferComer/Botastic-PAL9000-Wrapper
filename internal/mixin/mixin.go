@@ -109,4 +109,6 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 	defer close(req.DoneChan)
 
-	b.logger.WithField("result", r).Info("get result
+	b.logger.WithField("result", r).Info("get result")
+	if r.Err != nil && r.IgnoreIfError {
+		b.logge
