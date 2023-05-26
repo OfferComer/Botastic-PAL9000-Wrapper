@@ -115,4 +115,5 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 		return
 	}
 
-	msg := req.Context.Value(me
+	msg := req.Context.Value(messageKey{}).(*mixin.MessageView)
+	user := req
