@@ -119,4 +119,5 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 	user := req.Context.Value(userKey{}).(*mixin.User)
 	conv := req.Context.Value(convKey{}).(*mixin.Conversation)
 
-	mq := &mixin.Messa
+	mq := &mixin.MessageRequest{
+		ConversationID: msg.Conversa
