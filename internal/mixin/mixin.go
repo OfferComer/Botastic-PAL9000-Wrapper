@@ -124,3 +124,7 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 		MessageID:      uuid.Modify(msg.MessageID, "reply"),
 		Category:       msg.Category,
 	}
+
+	text := ""
+	if r.Err != nil {
+		text = 
