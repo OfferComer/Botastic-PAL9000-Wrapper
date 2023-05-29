@@ -122,4 +122,5 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 	mq := &mixin.MessageRequest{
 		ConversationID: msg.ConversationID,
 		MessageID:      uuid.Modify(msg.MessageID, "reply"),
-		Cat
+		Category:       msg.Category,
+	}
