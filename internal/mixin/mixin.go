@@ -127,4 +127,6 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 
 	text := ""
 	if r.Err != nil {
-		text = 
+		text = r.Err.Error()
+	} else {
+		text = r.ConvTurn.Resp
