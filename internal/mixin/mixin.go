@@ -132,4 +132,5 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 		text = r.ConvTurn.Response
 	}
 
-	b.messageCache.Add(mq.Messag
+	b.messageCache.Add(mq.MessageID, &Message{
+		Content: text,
