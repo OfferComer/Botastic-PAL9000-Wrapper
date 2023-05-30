@@ -134,3 +134,5 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 
 	b.messageCache.Add(mq.MessageID, &Message{
 		Content: text,
+		UserID:  b.me.UserID,
+	}, cache.Defaul
