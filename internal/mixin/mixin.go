@@ -129,4 +129,7 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 	if r.Err != nil {
 		text = r.Err.Error()
 	} else {
-		text = r.ConvTurn.Resp
+		text = r.ConvTurn.Response
+	}
+
+	b.messageCache.Add(mq.Messag
