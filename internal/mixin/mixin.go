@@ -137,4 +137,5 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 		UserID:  b.me.UserID,
 	}, cache.DefaultExpiration)
 
-	if conv.Category == mixin
+	if conv.Category == mixin.ConversationCategoryGroup {
+		text = fmt.Spri
