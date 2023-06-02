@@ -140,4 +140,4 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 	if conv.Category == mixin.ConversationCategoryGroup {
 		text = fmt.Sprintf("> @%s %s\n\n%s", user.IdentityNumber, req.Content, text)
 	}
-	mq.Data = base
+	mq.Data = base64.StdEncoding.EncodeToString([]byte(text)
