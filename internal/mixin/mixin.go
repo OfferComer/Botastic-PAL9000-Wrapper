@@ -138,4 +138,6 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 	}, cache.DefaultExpiration)
 
 	if conv.Category == mixin.ConversationCategoryGroup {
-		text = fmt.Sprintf("> @%s %s\n\n%s", user.IdentityNumber,
+		text = fmt.Sprintf("> @%s %s\n\n%s", user.IdentityNumber, req.Content, text)
+	}
+	mq.Data = base
