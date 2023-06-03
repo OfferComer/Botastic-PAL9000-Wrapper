@@ -142,4 +142,8 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 	}
 	mq.Data = base64.StdEncoding.EncodeToString([]byte(text))
 	if err := b.client.SendMessage(req.Context, mq); err != nil {
-		b.logger.WithError(err).Error("send me
+		b.logger.WithError(err).Error("send message error")
+	}
+}
+
+func (b *Bot) run(
