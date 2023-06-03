@@ -141,4 +141,4 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 		text = fmt.Sprintf("> @%s %s\n\n%s", user.IdentityNumber, req.Content, text)
 	}
 	mq.Data = base64.StdEncoding.EncodeToString([]byte(text))
-	if err := b.client.SendMessage(req.
+	if err := b.client.SendMessage(req.Context, mq); err != nil {
