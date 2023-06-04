@@ -146,4 +146,4 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 	}
 }
 
-func (b *Bot) run(
+func (b *Bot) run(ctx context.Context, msg *mixin.M
