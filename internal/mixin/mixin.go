@@ -149,4 +149,5 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) error {
 	b.logger.WithField("msg", msg).Info("in run func, get message")
 
-	if msg.Category != 
+	if msg.Category != mixin.MessageCategoryPlainText {
+		re
