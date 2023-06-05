@@ -150,4 +150,6 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 	b.logger.WithField("msg", msg).Info("in run func, get message")
 
 	if msg.Category != mixin.MessageCategoryPlainText {
-		re
+		return nil
+	}
+	if uuid.IsNil(msg.User
