@@ -152,4 +152,7 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 	if msg.Category != mixin.MessageCategoryPlainText {
 		return nil
 	}
-	if uuid.IsNil(msg.User
+	if uuid.IsNil(msg.UserID) {
+		return nil
+	}
+	conv, err := b.getConversa
