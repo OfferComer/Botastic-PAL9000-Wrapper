@@ -155,4 +155,6 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 	if uuid.IsNil(msg.UserID) {
 		return nil
 	}
-	conv, err := b.getConversa
+	conv, err := b.getConversation(ctx, msg.ConversationID)
+	if err != nil {
+		lo
