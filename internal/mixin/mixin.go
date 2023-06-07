@@ -160,4 +160,6 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 		log.Println("getConversation error:", err)
 		return nil
 	}
-	user, err := b.getUser(ctx, msg.Use
+	user, err := b.getUser(ctx, msg.UserID)
+	if err != nil {
+		log.Println(
