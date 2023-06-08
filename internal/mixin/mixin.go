@@ -166,4 +166,8 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 		return nil
 	}
 	if user.IdentityNumber == "0" {
-		log.Println("user is not a messenger u
+		log.Println("user is not a messenger user, ignored")
+		return nil
+	}
+
+	data, er
