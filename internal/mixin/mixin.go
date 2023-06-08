@@ -163,4 +163,6 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 	user, err := b.getUser(ctx, msg.UserID)
 	if err != nil {
 		log.Println("getUser error:", err)
-		return ni
+		return nil
+	}
+	if user.IdentityNumber == "0" 
