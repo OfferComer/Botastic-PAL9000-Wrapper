@@ -165,4 +165,5 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 		log.Println("getUser error:", err)
 		return nil
 	}
-	if user.IdentityNumber == "0" 
+	if user.IdentityNumber == "0" {
+		log.Println("user is not a messenger u
