@@ -170,4 +170,4 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 		return nil
 	}
 
-	data, er
+	data, err := base64.StdEncoding.DecodeString(msg.Dat
