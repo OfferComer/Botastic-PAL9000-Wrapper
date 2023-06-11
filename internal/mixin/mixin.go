@@ -174,3 +174,5 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 	if err != nil {
 		return nil
 	}
+	content := string(data)
+	prefix := fmt
