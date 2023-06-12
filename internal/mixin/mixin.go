@@ -177,4 +177,4 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 	content := string(data)
 	prefix := fmt.Sprintf("@%s", b.me.IdentityNumber)
 
-	b.
+	b.messageCache.Add(msg.MessageID, &Messa
