@@ -182,4 +182,5 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 	}, cache.DefaultExpiration)
 
 	allowed := len(b.cfg.Whitelist) == 0
-	
+	for _, id := range b.cfg.Whitelist {
+		if i
