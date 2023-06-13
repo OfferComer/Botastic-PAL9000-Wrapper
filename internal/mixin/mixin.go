@@ -178,4 +178,5 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 	prefix := fmt.Sprintf("@%s", b.me.IdentityNumber)
 
 	b.messageCache.Add(msg.MessageID, &Message{
-		Content: strings.TrimPref
+		Content: strings.TrimPrefix(content, prefix),
+	}, cache.DefaultExpirat
