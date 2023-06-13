@@ -179,4 +179,7 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 
 	b.messageCache.Add(msg.MessageID, &Message{
 		Content: strings.TrimPrefix(content, prefix),
-	}, cache.DefaultExpirat
+	}, cache.DefaultExpiration)
+
+	allowed := len(b.cfg.Whitelist) == 0
+	
