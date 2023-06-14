@@ -189,4 +189,7 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 		}
 	}
 	if !allowed {
-		return n
+		return nil
+	}
+
+	conversationKey := msg.C
