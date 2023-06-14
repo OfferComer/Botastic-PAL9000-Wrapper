@@ -183,4 +183,7 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 
 	allowed := len(b.cfg.Whitelist) == 0
 	for _, id := range b.cfg.Whitelist {
-		if id == user.IdentityNumber || conv.ConversationID
+		if id == user.IdentityNumber || conv.ConversationID == id {
+			allowed = true
+			break
+	
