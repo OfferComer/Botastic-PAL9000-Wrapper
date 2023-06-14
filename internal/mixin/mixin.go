@@ -192,4 +192,6 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 		return nil
 	}
 
-	conversationKey := msg.C
+	conversationKey := msg.ConversationID + ":" + msg.UserID
+
+	var quote
