@@ -186,4 +186,7 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 		if id == user.IdentityNumber || conv.ConversationID == id {
 			allowed = true
 			break
-	
+		}
+	}
+	if !allowed {
+		return n
