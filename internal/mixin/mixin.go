@@ -197,4 +197,8 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 	var quoteMessage *Message
 	if msg.QuoteMessageID != "" {
 		if v, ok := b.messageCache.Get(msg.QuoteMessageID); ok {
-			quoteMes
+			quoteMessage = v.(*Message)
+		}
+	}
+
+	// super group 
