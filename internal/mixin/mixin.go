@@ -201,4 +201,5 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 		}
 	}
 
-	// super group 
+	// super group bot
+	if strings.HasPrefix(user.IdentityNumbe
