@@ -208,4 +208,4 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 				return nil
 			}
 		}
-		conve
+		conversationKey = msg.ConversationI
