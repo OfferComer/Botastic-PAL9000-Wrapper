@@ -211,4 +211,5 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 		conversationKey = msg.ConversationID + ":" + msg.RepresentativeID
 	}
 
-	
+	replyContent := ""
+	if quoteMessage !
