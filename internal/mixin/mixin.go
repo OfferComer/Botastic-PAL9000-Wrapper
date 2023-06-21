@@ -212,4 +212,5 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 	}
 
 	replyContent := ""
-	if quoteMessage !
+	if quoteMessage != nil {
+		replyContent = quoteMessage.
