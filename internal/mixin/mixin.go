@@ -215,4 +215,4 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 	if quoteMessage != nil {
 		replyContent = quoteMessage.Content
 	}
-	content = strings.TrimSpace(
+	content = strings.TrimSpace(strings.TrimPrefix(content, prefix))
