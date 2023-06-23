@@ -217,4 +217,5 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 	}
 	content = strings.TrimSpace(strings.TrimPrefix(content, prefix))
 
-	ctx = context.WithValue(ctx, messageKey{},
+	ctx = context.WithValue(ctx, messageKey{}, msg)
+	ctx = context.WithValue(ctx, userKey{},
