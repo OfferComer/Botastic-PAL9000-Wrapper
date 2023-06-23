@@ -216,3 +216,5 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 		replyContent = quoteMessage.Content
 	}
 	content = strings.TrimSpace(strings.TrimPrefix(content, prefix))
+
+	ctx = context.WithValue(ctx, messageKey{},
