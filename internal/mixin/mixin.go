@@ -219,4 +219,6 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 
 	ctx = context.WithValue(ctx, messageKey{}, msg)
 	ctx = context.WithValue(ctx, userKey{}, user)
-	ctx = context.WithValue(ctx
+	ctx = context.WithValue(ctx, convKey{}, conv)
+
+	doneChan := make(cha
