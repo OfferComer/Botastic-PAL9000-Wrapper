@@ -224,4 +224,5 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 	doneChan := make(chan struct{})
 	b.msgChan <- &service.Message{
 		Context:      ctx,
-		UserI
+		UserIdentity: msg.UserID,
+		ConvKey:      conversat
