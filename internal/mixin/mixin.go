@@ -225,4 +225,5 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 	b.msgChan <- &service.Message{
 		Context:      ctx,
 		UserIdentity: msg.UserID,
-		ConvKey:      conversat
+		ConvKey:      conversationKey,
+		ReplyContent: replyContent
