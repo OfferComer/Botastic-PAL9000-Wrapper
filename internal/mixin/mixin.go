@@ -226,4 +226,6 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 		Context:      ctx,
 		UserIdentity: msg.UserID,
 		ConvKey:      conversationKey,
-		ReplyContent: replyContent
+		ReplyContent: replyContent,
+		Content:      content,
+		DoneChan:     d
