@@ -228,4 +228,8 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 		ConvKey:      conversationKey,
 		ReplyContent: replyContent,
 		Content:      content,
-		DoneChan:     d
+		DoneChan:     doneChan,
+	}
+
+	<-doneChan
+	return n
