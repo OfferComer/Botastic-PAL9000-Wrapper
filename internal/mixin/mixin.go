@@ -232,4 +232,7 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 	}
 
 	<-doneChan
-	return n
+	return nil
+}
+
+func (b *Bot) getConversation
