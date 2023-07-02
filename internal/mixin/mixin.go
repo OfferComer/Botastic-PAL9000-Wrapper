@@ -235,4 +235,4 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 	return nil
 }
 
-func (b *Bot) getConversation
+func (b *Bot) getConversation(ctx context.Context, convID string)
