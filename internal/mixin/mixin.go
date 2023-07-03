@@ -236,4 +236,7 @@ func (b *Bot) run(ctx context.Context, msg *mixin.MessageView, userID string) er
 }
 
 func (b *Bot) getConversation(ctx context.Context, convID string) (*mixin.Conversation, error) {
-	if conv, ok := 
+	if conv, ok := b.convMap[convID]; ok {
+		return conv, nil
+	}
+	conv, err 
