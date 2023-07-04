@@ -244,4 +244,7 @@ func (b *Bot) getConversation(ctx context.Context, convID string) (*mixin.Conver
 		return nil, err
 	}
 	b.convMap[convID] = conv
-	return con
+	return conv, nil
+}
+
+func (b *Bot) getUser(ctx co
