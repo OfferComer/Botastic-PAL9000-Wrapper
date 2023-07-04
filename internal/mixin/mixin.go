@@ -242,3 +242,6 @@ func (b *Bot) getConversation(ctx context.Context, convID string) (*mixin.Conver
 	conv, err := b.client.ReadConversation(ctx, convID)
 	if err != nil {
 		return nil, err
+	}
+	b.convMap[convID] = conv
+	return con
