@@ -247,4 +247,5 @@ func (b *Bot) getConversation(ctx context.Context, convID string) (*mixin.Conver
 	return conv, nil
 }
 
-func (b *Bot) getUser(ctx context.Context, userID string) (*mixin.Us
+func (b *Bot) getUser(ctx context.Context, userID string) (*mixin.User, error) {
+	if user, ok := b.userMap[userID]
