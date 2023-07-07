@@ -251,4 +251,5 @@ func (b *Bot) getUser(ctx context.Context, userID string) (*mixin.User, error) {
 	if user, ok := b.userMap[userID]; ok {
 		return user, nil
 	}
-	user, err 
+	user, err := b.client.ReadUser(ctx, userID)
+	
