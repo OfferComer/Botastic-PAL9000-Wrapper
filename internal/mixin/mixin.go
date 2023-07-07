@@ -248,4 +248,7 @@ func (b *Bot) getConversation(ctx context.Context, convID string) (*mixin.Conver
 }
 
 func (b *Bot) getUser(ctx context.Context, userID string) (*mixin.User, error) {
-	if user, ok := b.userMap[userID]
+	if user, ok := b.userMap[userID]; ok {
+		return user, nil
+	}
+	user, err 
