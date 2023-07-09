@@ -255,4 +255,5 @@ func (b *Bot) getUser(ctx context.Context, userID string) (*mixin.User, error) {
 	if err != nil {
 		return nil, err
 	}
-	b
+	b.userMap[userID] = user
+	return user, ni
