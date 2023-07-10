@@ -6,4 +6,4 @@ import (
 	"strconv"
 	"strings"
 
-	tgbotapi "gith
+	tgbotapi "github.com/go-telegram-bot-api/telegram
