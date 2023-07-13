@@ -16,3 +16,7 @@ var _ service.Adapter = (*Bot)(nil)
 type (
 	messageKey struct{}
 )
+
+type Bot struct {
+	name   string
+	cfg   
