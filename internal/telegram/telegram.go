@@ -20,4 +20,7 @@ type (
 type Bot struct {
 	name   string
 	cfg    config.TelegramConfig
-	client *tgb
+	client *tgbotapi.BotAPI
+}
+
+func Init(name string, cf
