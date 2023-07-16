@@ -19,4 +19,5 @@ type (
 
 type Bot struct {
 	name   string
-	cfg   
+	cfg    config.TelegramConfig
+	client *tgb
