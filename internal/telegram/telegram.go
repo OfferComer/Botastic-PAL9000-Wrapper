@@ -25,4 +25,6 @@ type Bot struct {
 
 func Init(name string, cfg config.TelegramConfig) (*Bot, error) {
 	bot, err := tgbotapi.NewBotAPI(cfg.Token)
-	i
+	if err != nil {
+		return nil, err
+	}
