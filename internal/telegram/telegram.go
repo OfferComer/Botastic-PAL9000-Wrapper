@@ -23,4 +23,5 @@ type Bot struct {
 	client *tgbotapi.BotAPI
 }
 
-func Init(name string, cf
+func Init(name string, cfg config.TelegramConfig) (*Bot, error) {
+	bot,
