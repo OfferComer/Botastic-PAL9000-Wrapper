@@ -30,4 +30,7 @@ func Init(name string, cfg config.TelegramConfig) (*Bot, error) {
 	}
 	bot.Debug = cfg.Debug
 
-	return &B
+	return &Bot{
+		name:   name,
+		cfg:    cfg,
+	
