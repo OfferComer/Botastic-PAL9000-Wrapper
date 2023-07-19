@@ -33,4 +33,8 @@ func Init(name string, cfg config.TelegramConfig) (*Bot, error) {
 	return &Bot{
 		name:   name,
 		cfg:    cfg,
-	
+		client: bot,
+	}, nil
+}
+
+func (b *Bot) G
