@@ -41,4 +41,4 @@ func (b *Bot) GetName() string {
 	return b.name
 }
 
-func (b *Bot) 
+func (b *Bot) GetMessageChan(ctx contex
