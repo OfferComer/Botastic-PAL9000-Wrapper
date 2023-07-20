@@ -41,4 +41,4 @@ func (b *Bot) GetName() string {
 	return b.name
 }
 
-func (b *Bot) GetMessageChan(ctx contex
+func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Messag
