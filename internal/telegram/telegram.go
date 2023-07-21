@@ -41,4 +41,6 @@ func (b *Bot) GetName() string {
 	return b.name
 }
 
-func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Messag
+func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
+	msgChan := make(chan *service.Message)
+	go fun
