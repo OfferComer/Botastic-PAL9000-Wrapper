@@ -43,4 +43,5 @@ func (b *Bot) GetName() string {
 
 func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 	msgChan := make(chan *service.Message)
-	go fun
+	go func() {
+		u := tgbotapi.NewUpdate(0)
