@@ -45,3 +45,5 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 	msgChan := make(chan *service.Message)
 	go func() {
 		u := tgbotapi.NewUpdate(0)
+		updates := b.client.GetUpdatesChan(u)
+		fo
