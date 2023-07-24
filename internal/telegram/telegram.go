@@ -47,4 +47,4 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 		u := tgbotapi.NewUpdate(0)
 		updates := b.client.GetUpdatesChan(u)
 		for update := range updates {
-			if u
+			if update.Message == nil || update.Mes
