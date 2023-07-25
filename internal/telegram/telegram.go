@@ -47,4 +47,8 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 		u := tgbotapi.NewUpdate(0)
 		updates := b.client.GetUpdatesChan(u)
 		for update := range updates {
-			if update.Message == nil || update.Message.Chat == nil || update.Message.Text 
+			if update.Message == nil || update.Message.Chat == nil || update.Message.Text == "" {
+				continue
+			}
+
+			allowed
