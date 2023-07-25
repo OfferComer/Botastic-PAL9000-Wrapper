@@ -51,4 +51,5 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 				continue
 			}
 
-			allowed
+			allowed := len(b.cfg.Whitelist) == 0
+			for _, id 
