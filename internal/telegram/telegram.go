@@ -53,4 +53,4 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 
 			allowed := len(b.cfg.Whitelist) == 0
 			for _, id := range b.cfg.Whitelist {
-				if strconv.FormatInt(update.Message.Chat.
+				if strconv.FormatInt(update.Message.Chat.ID, 10) == id || strconv.FormatInt(update.Mess
