@@ -57,3 +57,6 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 					allowed = true
 					break
 				}
+			}
+			if !allowed {
+				conti
