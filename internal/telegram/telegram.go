@@ -63,4 +63,4 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 			}
 
 			prefix := "@" + b.client.Self.UserName
-			if update.Message
+			if update.Message.Chat.IsGroup() || update.Message.Chat.I
