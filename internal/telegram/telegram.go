@@ -59,4 +59,7 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 				}
 			}
 			if !allowed {
-				conti
+				continue
+			}
+
+			prefix := "@" + b.client.
