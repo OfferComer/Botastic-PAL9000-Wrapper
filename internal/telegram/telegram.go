@@ -62,4 +62,5 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 				continue
 			}
 
-			prefix := "@" + b.client.
+			prefix := "@" + b.client.Self.UserName
+			if update.Message
