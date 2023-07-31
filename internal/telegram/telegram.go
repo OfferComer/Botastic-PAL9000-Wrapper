@@ -63,4 +63,5 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 			}
 
 			prefix := "@" + b.client.Self.UserName
-			if update.Message.Chat.IsGroup() || update.Message.Chat.I
+			if update.Message.Chat.IsGroup() || update.Message.Chat.IsSuperGroup() {
+				if update.Message.Reply
