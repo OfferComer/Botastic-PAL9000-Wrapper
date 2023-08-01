@@ -71,4 +71,5 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 				}
 			}
 			replyContent := ""
-			if 
+			if update.Message.ReplyToMessage != nil {
+			
