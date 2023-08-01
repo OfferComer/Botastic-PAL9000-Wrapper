@@ -68,3 +68,7 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 					if !strings.HasPrefix(update.Message.Text, prefix) {
 						continue
 					}
+				}
+			}
+			replyContent := ""
+			if 
