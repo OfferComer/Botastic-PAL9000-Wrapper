@@ -75,4 +75,5 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 				replyContent = update.Message.ReplyToMessage.Text
 			}
 
-			content := strings.TrimSpace(strings.TrimPrefix(update.Message.Text, pr
+			content := strings.TrimSpace(strings.TrimPrefix(update.Message.Text, prefix))
+			messageCtx := context.Wi
