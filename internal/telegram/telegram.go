@@ -76,4 +76,5 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 			}
 
 			content := strings.TrimSpace(strings.TrimPrefix(update.Message.Text, prefix))
-			messageCtx := context.Wi
+			messageCtx := context.WithValue(ctx, messageKey{}, update.Message)
+		
