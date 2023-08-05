@@ -78,4 +78,5 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 			content := strings.TrimSpace(strings.TrimPrefix(update.Message.Text, prefix))
 			messageCtx := context.WithValue(ctx, messageKey{}, update.Message)
 			msgChan <- &service.Message{
-				Rep
+				ReplyContent: replyContent,
+				Context:
