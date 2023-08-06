@@ -82,4 +82,6 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 				Context:      messageCtx,
 				Content:      content,
 				UserIdentity: strconv.FormatInt(update.Message.From.ID, 10),
-				ConvKey:      strconv.FormatInt(update.Me
+				ConvKey:      strconv.FormatInt(update.Message.Chat.ID, 10),
+			}
+	
