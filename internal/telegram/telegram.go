@@ -87,4 +87,8 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 		}
 		select {
 		case <-ctx.Done():
-			b.client.StopReceivingUpdates
+			b.client.StopReceivingUpdates()
+			close(msgChan)
+			return
+		}
+	
