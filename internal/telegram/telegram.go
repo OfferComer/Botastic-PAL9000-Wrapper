@@ -97,4 +97,8 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 }
 
 func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
-	if r.Err != nil && r.Igno
+	if r.Err != nil && r.IgnoreIfError {
+		return
+	}
+	text := ""
+	if
