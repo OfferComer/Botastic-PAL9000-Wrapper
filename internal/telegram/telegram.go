@@ -96,4 +96,4 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 	return msgChan
 }
 
-func (b *Bo
+func (b *Bot) HandleResult(req *service.Message, r *servi
