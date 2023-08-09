@@ -101,4 +101,5 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 		return
 	}
 	text := ""
-	if
+	if r.Err != nil {
+		text = r.Err.Error(
