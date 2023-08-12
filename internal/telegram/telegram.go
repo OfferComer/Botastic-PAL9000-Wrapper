@@ -105,4 +105,5 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 		text = r.Err.Error()
 	} else {
 		text = r.ConvTurn.Response
-	
+	}
+	msg := req.Context.Value(mess
