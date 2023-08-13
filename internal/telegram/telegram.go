@@ -106,4 +106,5 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 	} else {
 		text = r.ConvTurn.Response
 	}
-	msg := req.Context.Value(mess
+	msg := req.Context.Value(messageKey{}).(*tgbotapi.Message)
+	reply := tg
