@@ -107,4 +107,5 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 		text = r.ConvTurn.Response
 	}
 	msg := req.Context.Value(messageKey{}).(*tgbotapi.Message)
-	reply := tg
+	reply := tgbotapi.NewMessage(msg.Chat.ID, text)
+	
