@@ -108,4 +108,5 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 	}
 	msg := req.Context.Value(messageKey{}).(*tgbotapi.Message)
 	reply := tgbotapi.NewMessage(msg.Chat.ID, text)
+	// reply.ReplyToMessageID = msg.MessageID
 	
