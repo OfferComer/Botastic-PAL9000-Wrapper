@@ -109,4 +109,5 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 	msg := req.Context.Value(messageKey{}).(*tgbotapi.Message)
 	reply := tgbotapi.NewMessage(msg.Chat.ID, text)
 	// reply.ReplyToMessageID = msg.MessageID
-	if _, err := b.client.Send(reply); err !
+	if _, err := b.client.Send(reply); err != nil {
+		fmt.Printf("send reply
