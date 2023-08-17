@@ -119,3 +119,42 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 			if err := server.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 				log.Fatalf("listen: %s\n", err)
 			}
+		}()
+
+		<-ctx.Done()
+
+		ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+		defer cancel()
+
+		if err := server.Shutdown(ctx); err != nil {
+			log.Printf("Server forced to shutdown: %v\n", err)
+		} else {
+			log.Println("Server gracefully stopped")
+		}
+	}()
+
+	return msgChan
+}
+
+func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
+	defer close(req.DoneChan)
+
+	w := req.Context.Value(httpResponseKey{}).(http.ResponseWriter)
+	if r.Err != nil && r.IgnoreIfError {
+		w.Header().Set("Content-Type", "application/xml; charset=utf-8")
+		w.Write([]byte("<xml></xml>"))
+		return
+	}
+	receivedMessage := req.Context.Value(rawMessageKey{}).(TextMessage)
+
+	text := ""
+	if r.Err != nil {
+		text = r.Err.Error()
+	} else {
+		text = r.ConvTurn.Response
+	}
+
+	responseMessage := TextMessage{
+		ToUserName:   receivedMessage.FromUserName,
+		FromUserName: receivedMessage.ToUserName,
+		CreateTime:   time.Now().Unix(),
