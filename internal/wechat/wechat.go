@@ -158,3 +158,16 @@ func (b *Bot) HandleResult(req *service.Message, r *service.Result) {
 		ToUserName:   receivedMessage.FromUserName,
 		FromUserName: receivedMessage.ToUserName,
 		CreateTime:   time.Now().Unix(),
+		MsgType:      "text",
+		Content:      text,
+	}
+
+	responseXML, err := xml.MarshalIndent(responseMessage, "", "  ")
+	if err != nil {
+		http.Error(w, "Failed to create response", http.StatusInternalServerError)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/xml; charset=utf-8")
+	w.Write(responseXML)
+}
