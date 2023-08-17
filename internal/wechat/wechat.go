@@ -79,3 +79,43 @@ func (b *Bot) GetMessageChan(ctx context.Context) <-chan *service.Message {
 				http.Error(w, "Invalid signature", http.StatusForbidden)
 				return
 			}
+
+			if r.Method == "GET" {
+				w.Write([]byte(echostr))
+				return
+			}
+
+			body, err := io.ReadAll(r.Body)
+			if err != nil {
+				http.Error(w, "Failed to read request body", http.StatusBadRequest)
+				return
+			}
+			fmt.Println(string(body))
+
+			var receivedMessage TextMessage
+			err = xml.Unmarshal(body, &receivedMessage)
+			if err != nil {
+				http.Error(w, "Failed to parse request body", http.StatusBadRequest)
+				return
+			}
+
+			ctx = r.Context()
+			ctx = context.WithValue(ctx, httpRequsetKey{}, r)
+			ctx = context.WithValue(ctx, httpResponseKey{}, w)
+			ctx = context.WithValue(ctx, rawMessageKey{}, receivedMessage)
+			doneChan := make(chan struct{})
+			msgChan <- &service.Message{
+				Context:      ctx,
+				UserIdentity: receivedMessage.FromUserName,
+				ConvKey:      receivedMessage.FromUserName,
+				Content:      receivedMessage.Content,
+				DoneChan:     doneChan,
+			}
+			<-doneChan
+		})
+
+		go func() {
+			fmt.Printf("wechat HTTP server run at: %s\n", b.cfg.Address)
+			if err := server.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+				log.Fatalf("listen: %s\n", err)
+			}
