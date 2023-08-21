@@ -13,4 +13,4 @@ import (
 )
 
 var (
-	linkRegex = regexp.Mu
+	linkRegex = regexp.MustCompile(`https?:\/\/(www\.)?
