@@ -17,4 +17,5 @@ var (
 )
 
 type Adapter interface {
-	GetName() 
+	GetName() string
+	GetMessageChan(ctx context.Con
