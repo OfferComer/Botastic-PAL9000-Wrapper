@@ -18,4 +18,5 @@ var (
 
 type Adapter interface {
 	GetName() string
-	GetMessageChan(ctx context.Con
+	GetMessageChan(ctx context.Context) <-chan *Message
+	Handle
