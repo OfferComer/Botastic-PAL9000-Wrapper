@@ -24,4 +24,6 @@ type Adapter interface {
 
 type Handler struct {
 	cfg     config.GeneralConfig
-	client  *botastic.C
+	client  *botastic.Client
+	store   store.Store
+	adapter Adap
