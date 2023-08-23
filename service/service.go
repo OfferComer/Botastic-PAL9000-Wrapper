@@ -23,4 +23,5 @@ type Adapter interface {
 }
 
 type Handler struct {
-	cfg    
+	cfg     config.GeneralConfig
+	client  *botastic.C
