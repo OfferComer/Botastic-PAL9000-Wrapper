@@ -19,4 +19,8 @@ var (
 type Adapter interface {
 	GetName() string
 	GetMessageChan(ctx context.Context) <-chan *Message
-	HandleResult(message *Message, result *Result
+	HandleResult(message *Message, result *Result)
+}
+
+type Handler struct {
+	cfg    
