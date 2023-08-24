@@ -26,4 +26,8 @@ type Handler struct {
 	cfg     config.GeneralConfig
 	client  *botastic.Client
 	store   store.Store
-	adapter Adap
+	adapter Adapter
+	logger  *logrus.Entry
+}
+
+type Message 
