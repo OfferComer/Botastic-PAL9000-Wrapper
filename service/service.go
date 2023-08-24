@@ -30,4 +30,6 @@ type Handler struct {
 	logger  *logrus.Entry
 }
 
-type Message 
+type Message struct {
+	Context context.Context
+	BotID
