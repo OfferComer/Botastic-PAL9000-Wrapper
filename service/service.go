@@ -35,4 +35,6 @@ type Message struct {
 	BotID   uint64
 	Lang    string
 
-	UserIde
+	UserIdentity string
+	ConvKey      string
+	C
