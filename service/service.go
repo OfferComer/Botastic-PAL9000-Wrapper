@@ -32,4 +32,7 @@ type Handler struct {
 
 type Message struct {
 	Context context.Context
-	BotID
+	BotID   uint64
+	Lang    string
+
+	UserIde
