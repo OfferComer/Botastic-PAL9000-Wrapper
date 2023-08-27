@@ -39,3 +39,8 @@ type Message struct {
 	ConvKey      string
 	Content      string
 	ReplyContent string
+
+	DoneChan chan struct{}
+}
+
+type Result 
