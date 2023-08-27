@@ -37,4 +37,5 @@ type Message struct {
 
 	UserIdentity string
 	ConvKey      string
-	C
+	Content      string
+	ReplyContent string
