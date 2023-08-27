@@ -43,4 +43,5 @@ type Message struct {
 	DoneChan chan struct{}
 }
 
-type Result 
+type Result struct {
+	ConvTurn      *botastic.Conv
