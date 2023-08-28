@@ -49,3 +49,4 @@ type Result struct {
 	IgnoreIfError bool
 }
 
+func NewHandler(cfg config.Gener
