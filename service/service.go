@@ -44,4 +44,8 @@ type Message struct {
 }
 
 type Result struct {
-	ConvTurn      *botastic.Conv
+	ConvTurn      *botastic.ConvTurn
+	Err           error
+	IgnoreIfError bool
+}
+
