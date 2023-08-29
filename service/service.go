@@ -49,4 +49,5 @@ type Result struct {
 	IgnoreIfError bool
 }
 
-func NewHandler(cfg config.GeneralConfig, store store.Store, adapt
+func NewHandler(cfg config.GeneralConfig, store store.Store, adapter Adapter) *Handler {
+	client := b
