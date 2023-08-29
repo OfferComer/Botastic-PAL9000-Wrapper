@@ -50,4 +50,4 @@ type Result struct {
 }
 
 func NewHandler(cfg config.GeneralConfig, store store.Store, adapter Adapter) *Handler {
-	client := botastic.New(cfg.Botastic.AppId, "
+	client := botastic.New(cfg.Botastic.AppId, "", botastic.WithDebug(cfg.Bot
