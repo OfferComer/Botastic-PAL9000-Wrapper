@@ -53,3 +53,6 @@ func NewHandler(cfg config.GeneralConfig, store store.Store, adapter Adapter) *H
 	client := botastic.New(cfg.Botastic.AppId, "", botastic.WithDebug(cfg.Botastic.Debug), botastic.WithHost(cfg.Botastic.Host))
 	return &Handler{
 		cfg:     cfg,
+		client:  client,
+		store:   store,
+		adapt
