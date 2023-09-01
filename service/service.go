@@ -55,4 +55,5 @@ func NewHandler(cfg config.GeneralConfig, store store.Store, adapter Adapter) *H
 		cfg:     cfg,
 		client:  client,
 		store:   store,
-		adapt
+		adapter: adapter,
+		logger:  logrus.WithField("
