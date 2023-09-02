@@ -56,4 +56,4 @@ func NewHandler(cfg config.GeneralConfig, store store.Store, adapter Adapter) *H
 		client:  client,
 		store:   store,
 		adapter: adapter,
-		logger:  logrus.WithField("
+		logger:  logrus.WithField("adapter", fmt.Sprintf("%T", adapter)).WithFiel
