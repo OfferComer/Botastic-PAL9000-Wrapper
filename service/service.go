@@ -60,4 +60,4 @@ func NewHandler(cfg config.GeneralConfig, store store.Store, adapter Adapter) *H
 	}
 }
 
-fun
+func (h *Handler) Start(ctx context.Cont
