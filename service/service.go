@@ -60,4 +60,5 @@ func NewHandler(cfg config.GeneralConfig, store store.Store, adapter Adapter) *H
 	}
 }
 
-func (h *Handler) Start(ctx context.Cont
+func (h *Handler) Start(ctx context.Context) error {
+	msgChan := h.adapter.GetMessageChan(ct
