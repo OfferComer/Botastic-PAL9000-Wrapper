@@ -66,4 +66,5 @@ func (h *Handler) Start(ctx context.Context) error {
 	for {
 		select {
 		case msg := <-msgChan:
-			h.logger.WithField("ms
+			h.logger.WithField("msg", msg).Info("received message")
+			if ms
