@@ -67,4 +67,5 @@ func (h *Handler) Start(ctx context.Context) error {
 		select {
 		case msg := <-msgChan:
 			h.logger.WithField("msg", msg).Info("received message")
-			if ms
+			if msg.BotID == 0 {
+				msg.BotID = h.cfg.Bot.Bot
