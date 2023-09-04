@@ -68,4 +68,7 @@ func (h *Handler) Start(ctx context.Context) error {
 		case msg := <-msgChan:
 			h.logger.WithField("msg", msg).Info("received message")
 			if msg.BotID == 0 {
-				msg.BotID = h.cfg.Bot.Bot
+				msg.BotID = h.cfg.Bot.BotID
+			}
+			if msg.Lang == "" {
+				msg.Lang = h.cfg
