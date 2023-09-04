@@ -71,4 +71,7 @@ func (h *Handler) Start(ctx context.Context) error {
 				msg.BotID = h.cfg.Bot.BotID
 			}
 			if msg.Lang == "" {
-				msg.Lang = h.cfg
+				msg.Lang = h.cfg.Bot.Lang
+			}
+
+			turn, err := h.hand
