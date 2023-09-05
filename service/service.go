@@ -74,4 +74,5 @@ func (h *Handler) Start(ctx context.Context) error {
 				msg.Lang = h.cfg.Bot.Lang
 			}
 
-			turn, err := h.hand
+			turn, err := h.handleMessage(ctx, msg)
+			h.logger.Wi
