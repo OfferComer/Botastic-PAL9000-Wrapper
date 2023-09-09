@@ -76,4 +76,6 @@ func (h *Handler) Start(ctx context.Context) error {
 
 			turn, err := h.handleMessage(ctx, msg)
 			h.logger.WithFields(logrus.Fields{
-				"turn":    
+				"turn":       turn,
+				"result_err": err,
+			}).Info("h
