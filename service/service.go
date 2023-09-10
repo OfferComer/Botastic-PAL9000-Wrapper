@@ -79,4 +79,5 @@ func (h *Handler) Start(ctx context.Context) error {
 				"turn":       turn,
 				"result_err": err,
 			}).Info("handled message")
-			h.adapter.HandleResult(m
+			h.adapter.HandleResult(msg, &Result{
+				ConvTurn:      turn,
