@@ -78,4 +78,5 @@ func (h *Handler) Start(ctx context.Context) error {
 			h.logger.WithFields(logrus.Fields{
 				"turn":       turn,
 				"result_err": err,
-			}).Info("h
+			}).Info("handled message")
+			h.adapter.HandleResult(m
