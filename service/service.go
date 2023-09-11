@@ -81,4 +81,7 @@ func (h *Handler) Start(ctx context.Context) error {
 			}).Info("handled message")
 			h.adapter.HandleResult(msg, &Result{
 				ConvTurn:      turn,
-				IgnoreIfError: h.cfg.Optio
+				IgnoreIfError: h.cfg.Options.IgnoreIfError,
+				Err:           err,
+			})
+		case <-c
