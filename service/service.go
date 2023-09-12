@@ -90,4 +90,4 @@ func (h *Handler) Start(ctx context.Context) error {
 	}
 }
 
-fun
+func (h *Handler) handleMessage(ctx context.Con
