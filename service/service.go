@@ -84,4 +84,10 @@ func (h *Handler) Start(ctx context.Context) error {
 				IgnoreIfError: h.cfg.Options.IgnoreIfError,
 				Err:           err,
 			})
-		case <-c
+		case <-ctx.Done():
+			return ctx.Err()
+		}
+	}
+}
+
+fun
