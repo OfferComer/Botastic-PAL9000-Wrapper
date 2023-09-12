@@ -90,4 +90,5 @@ func (h *Handler) Start(ctx context.Context) error {
 	}
 }
 
-func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.ConvTurn, er
+func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.ConvTurn, error) {
+	conv, err := h.store.GetConversation
