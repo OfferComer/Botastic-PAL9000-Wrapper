@@ -93,4 +93,8 @@ func (h *Handler) Start(ctx context.Context) error {
 func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.ConvTurn, error) {
 	conv, err := h.store.GetConversationByKey(m.ConvKey)
 	if err != nil {
-		return nil,
+		return nil, err
+	}
+
+	if conv == nil {
+		conv, e
