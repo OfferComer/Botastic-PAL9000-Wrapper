@@ -97,4 +97,6 @@ func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.Conv
 	}
 
 	if conv == nil {
-		conv, err = h.client.CreateConversation(ctx, botastic.CreateConversat
+		conv, err = h.client.CreateConversation(ctx, botastic.CreateConversationRequest{
+			BotID:        m.BotID,
+			
