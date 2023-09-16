@@ -106,4 +106,4 @@ func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.Conv
 			return nil, err
 		}
 
-		if err := h.store.SetCon
+		if err := h.store.SetConversation(m.ConvKey, conv); err != n
