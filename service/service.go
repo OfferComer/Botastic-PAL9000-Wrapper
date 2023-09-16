@@ -103,4 +103,7 @@ func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.Conv
 			Lang:         m.Lang,
 		})
 		if err != nil {
-			re
+			return nil, err
+		}
+
+		if err := h.store.SetCon
