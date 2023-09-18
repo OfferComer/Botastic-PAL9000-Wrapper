@@ -115,4 +115,6 @@ func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.Conv
 	if m.ReplyContent != "" {
 		content = fmt.Sprintf(`"%s" `, m.ReplyContent)
 	}
-	conten
+	content += m.Content
+
+	convTurn, err := h.client
