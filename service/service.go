@@ -118,4 +118,5 @@ func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.Conv
 	content += m.Content
 
 	convTurn, err := h.client.PostToConversation(ctx, botastic.PostToConversationPayloadRequest{
-	
+		ConversationID: conv.ID,
+		Content:    
