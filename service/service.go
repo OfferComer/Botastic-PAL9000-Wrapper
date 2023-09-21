@@ -123,4 +123,7 @@ func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.Conv
 		Category:       "plain-text",
 	})
 	if err != nil {
-		return nil, e
+		return nil, err
+	}
+
+	turn, err := h.client.Get
