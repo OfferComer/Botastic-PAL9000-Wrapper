@@ -126,4 +126,4 @@ func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.Conv
 		return nil, err
 	}
 
-	turn, err := h.client.Get
+	turn, err := h.client.GetConvTurn(ctx, conv.ID, convTurn
