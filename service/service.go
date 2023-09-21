@@ -120,4 +120,7 @@ func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.Conv
 	convTurn, err := h.client.PostToConversation(ctx, botastic.PostToConversationPayloadRequest{
 		ConversationID: conv.ID,
 		Content:        content,
-		Category:       "
+		Category:       "plain-text",
+	})
+	if err != nil {
+		return nil, e
