@@ -126,4 +126,7 @@ func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.Conv
 		return nil, err
 	}
 
-	turn, err := h.client.GetConvTurn(ctx, conv.ID, convTurn
+	turn, err := h.client.GetConvTurn(ctx, conv.ID, convTurn.ID, true)
+	if err != nil {
+		// TODO: retry
+		retu
