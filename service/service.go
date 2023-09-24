@@ -132,4 +132,7 @@ func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.Conv
 		return nil, err
 	}
 	if turn.Status != 2 {
-		return nil, fmt.Errorf("unexpected s
+		return nil, fmt.Errorf("unexpected status: %d", turn.Status)
+	}
+
+	if h.c
