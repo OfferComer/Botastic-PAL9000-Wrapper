@@ -136,4 +136,7 @@ func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.Conv
 	}
 
 	if h.cfg.Options.FormatLinks && turn.Response != "" {
-		turn.Respon
+		turn.Response = formatLink(turn.Response)
+	}
+
+	retu
