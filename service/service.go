@@ -135,4 +135,4 @@ func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.Conv
 		return nil, fmt.Errorf("unexpected status: %d", turn.Status)
 	}
 
-	if h.c
+	if h.cfg.Options.FormatLinks && tu
