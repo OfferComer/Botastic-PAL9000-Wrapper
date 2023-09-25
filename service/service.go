@@ -143,4 +143,5 @@ func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.Conv
 }
 
 func formatLink(str string) string {
-	isSpace := fu
+	isSpace := func(c byte) bool {
+		return c == ' ' || c =
