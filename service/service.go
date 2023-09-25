@@ -142,4 +142,5 @@ func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.Conv
 	return turn, nil
 }
 
-func formatLink
+func formatLink(str string) string {
+	isSpace := fu
