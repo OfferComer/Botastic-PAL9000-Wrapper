@@ -144,4 +144,6 @@ func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.Conv
 
 func formatLink(str string) string {
 	isSpace := func(c byte) bool {
-		return c == ' ' || c =
+		return c == ' ' || c == '\t' || c == '\n' || c == '\r'
+	}
+	matches := linkReg
