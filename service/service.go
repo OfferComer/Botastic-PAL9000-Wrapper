@@ -139,4 +139,7 @@ func (h *Handler) handleMessage(ctx context.Context, m *Message) (*botastic.Conv
 		turn.Response = formatLink(turn.Response)
 	}
 
-	retu
+	return turn, nil
+}
+
+func formatLink
