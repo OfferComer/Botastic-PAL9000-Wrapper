@@ -146,4 +146,5 @@ func formatLink(str string) string {
 	isSpace := func(c byte) bool {
 		return c == ' ' || c == '\t' || c == '\n' || c == '\r'
 	}
-	matches := linkReg
+	matches := linkRegex.FindAllStringSubmatchIndex(str, -1)
+	var
