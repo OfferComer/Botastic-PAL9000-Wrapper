@@ -147,4 +147,5 @@ func formatLink(str string) string {
 		return c == ' ' || c == '\t' || c == '\n' || c == '\r'
 	}
 	matches := linkRegex.FindAllStringSubmatchIndex(str, -1)
-	var
+	var result strings.Builder
+	lastIdx :
