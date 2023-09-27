@@ -150,4 +150,5 @@ func formatLink(str string) string {
 	var result strings.Builder
 	lastIdx := 0
 	for _, match := range matches {
-		start, 
+		start, end := match[0], match[1]
+		result.WriteString(s
