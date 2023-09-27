@@ -148,4 +148,6 @@ func formatLink(str string) string {
 	}
 	matches := linkRegex.FindAllStringSubmatchIndex(str, -1)
 	var result strings.Builder
-	lastIdx :
+	lastIdx := 0
+	for _, match := range matches {
+		start, 
