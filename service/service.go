@@ -154,4 +154,7 @@ func formatLink(str string) string {
 		result.WriteString(str[lastIdx:start])
 
 		if start > 0 && !isSpace(str[start-1]) {
-			result.WriteStrin
+			result.WriteString(" ")
+		}
+
+		result.WriteString(str[start:end])
