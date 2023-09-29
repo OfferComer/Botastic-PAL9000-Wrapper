@@ -158,3 +158,5 @@ func formatLink(str string) string {
 		}
 
 		result.WriteString(str[start:end])
+
+		if end < len(str) && !isSpace(st
