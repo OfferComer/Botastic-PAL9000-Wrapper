@@ -167,4 +167,5 @@ func formatLink(str string) string {
 	}
 
 	result.WriteString(str[lastIdx:])
-	return result.String(
+	return result.String()
+}
