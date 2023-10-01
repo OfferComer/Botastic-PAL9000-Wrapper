@@ -1,3 +1,5 @@
 package service
 
-import "testin
+import "testing"
+
+func TestFormatLink(t *t
