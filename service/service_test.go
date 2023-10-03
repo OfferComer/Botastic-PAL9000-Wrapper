@@ -7,3 +7,5 @@ func TestFormatLink(t *testing.T) {
 		input string
 		want  string
 	}{
+		{
+			input: "Pando的Web应用程序是Pando Proto，可在ht
