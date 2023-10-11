@@ -16,4 +16,4 @@ func TestFormatLink(t *testing.T) {
 			want:  "您可以通过Google Play下载和安装Mixin。如果要下载Apk，请通过浏览器打开 https://mixin.one/mm 或 https://mixin-www.zeromesh.net/mm 。对于iOS用户，请查看 https://channel.mixinbots.com/dl 。桌面版本请在浏览器中打开 https://mixin.one/mm 。移动设备至少支持Android 7.0+和iOS 13.0+。",
 		},
 		{
-			inp
+			input: "Fennec的地址是 https://pando.im/
