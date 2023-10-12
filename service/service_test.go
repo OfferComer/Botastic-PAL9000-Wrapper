@@ -21,4 +21,8 @@ func TestFormatLink(t *testing.T) {
 		},
 		{
 			input: "没有链接不应该改变",
-			want:  
+			want:  "没有链接不应该改变",
+		},
+	}
+
+	for _, c := range
