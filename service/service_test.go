@@ -17,4 +17,6 @@ func TestFormatLink(t *testing.T) {
 		},
 		{
 			input: "Fennec的地址是 https://pando.im/wallet/ 。",
-			want:  "Fennec的地
+			want:  "Fennec的地址是 https://pando.im/wallet/ 。",
+		},
+		
