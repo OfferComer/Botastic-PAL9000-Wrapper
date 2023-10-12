@@ -19,4 +19,6 @@ func TestFormatLink(t *testing.T) {
 			input: "Fennec的地址是 https://pando.im/wallet/ 。",
 			want:  "Fennec的地址是 https://pando.im/wallet/ 。",
 		},
-		
+		{
+			input: "没有链接不应该改变",
+			want:  
