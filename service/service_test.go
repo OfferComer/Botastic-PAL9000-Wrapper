@@ -27,3 +27,5 @@ func TestFormatLink(t *testing.T) {
 
 	for _, c := range cases {
 		t.Run(c.input, func(t *testing.T) {
+			got := formatLink(c.input)
+			if got != c
