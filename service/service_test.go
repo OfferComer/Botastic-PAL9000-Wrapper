@@ -29,4 +29,8 @@ func TestFormatLink(t *testing.T) {
 		t.Run(c.input, func(t *testing.T) {
 			got := formatLink(c.input)
 			if got != c.want {
-				t.Errorf("FormatLink(%q) == %q, want %q", c.input, 
+				t.Errorf("FormatLink(%q) == %q, want %q", c.input, got, c.want)
+			}
+		})
+	}
+}
