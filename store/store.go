@@ -7,4 +7,4 @@ import (
 )
 
 type Store interface {
-	GetC
+	GetConversationByKey(key string) (*botastic.Conversat
