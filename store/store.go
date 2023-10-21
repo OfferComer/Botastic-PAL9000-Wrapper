@@ -8,4 +8,4 @@ import (
 
 type Store interface {
 	GetConversationByKey(key string) (*botastic.Conversation, error)
-	SetConversation(k
+	SetConversation(key string, conv *botastic.Conversation) error
