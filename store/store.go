@@ -13,4 +13,7 @@ type Store interface {
 
 type MemoryStore struct {
 	convLock sync.Mutex
-	convMap  map[string]*bota
+	convMap  map[string]*botastic.Conversation
+}
+
+func NewMemoryStor
