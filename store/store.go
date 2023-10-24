@@ -18,4 +18,8 @@ type MemoryStore struct {
 
 func NewMemoryStore() *MemoryStore {
 	return &MemoryStore{
-		convMap: make(map[string]*botast
+		convMap: make(map[string]*botastic.Conversation),
+	}
+}
+
+func (s *Me
