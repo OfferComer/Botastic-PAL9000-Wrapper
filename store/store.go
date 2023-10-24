@@ -17,4 +17,5 @@ type MemoryStore struct {
 }
 
 func NewMemoryStore() *MemoryStore {
-	return &MemoryStor
+	return &MemoryStore{
+		convMap: make(map[string]*botast
