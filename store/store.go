@@ -16,4 +16,5 @@ type MemoryStore struct {
 	convMap  map[string]*botastic.Conversation
 }
 
-func NewMemoryStor
+func NewMemoryStore() *MemoryStore {
+	return &MemoryStor
