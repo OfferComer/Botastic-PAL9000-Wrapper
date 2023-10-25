@@ -26,4 +26,6 @@ func (s *MemoryStore) GetConversationByKey(key string) (*botastic.Conversation, 
 	s.convLock.Lock()
 	defer s.convLock.Unlock()
 
-	
+	return s.convMap[key], nil
+}
+
