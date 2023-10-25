@@ -22,4 +22,5 @@ func NewMemoryStore() *MemoryStore {
 	}
 }
 
-func (s *MemoryStore) GetConversationByKey(key string) 
+func (s *MemoryStore) GetConversationByKey(key string) (*botastic.Conversation, error) {
+	s.convLoc
