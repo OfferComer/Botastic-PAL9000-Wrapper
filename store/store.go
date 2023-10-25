@@ -22,4 +22,4 @@ func NewMemoryStore() *MemoryStore {
 	}
 }
 
-func (s *Me
+func (s *MemoryStore) GetConversationByKey(key string) 
