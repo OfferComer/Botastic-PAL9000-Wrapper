@@ -29,4 +29,4 @@ func (s *MemoryStore) GetConversationByKey(key string) (*botastic.Conversation, 
 	return s.convMap[key], nil
 }
 
-func (s *MemoryStore) SetConversation
+func (s *MemoryStore) SetConversation(key string, conv *botastic.Conversation) err
