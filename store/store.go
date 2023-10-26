@@ -29,4 +29,6 @@ func (s *MemoryStore) GetConversationByKey(key string) (*botastic.Conversation, 
 	return s.convMap[key], nil
 }
 
-func (s *MemoryStore) SetConversation(key string, conv *botastic.Conversation) err
+func (s *MemoryStore) SetConversation(key string, conv *botastic.Conversation) error {
+	s.convLock.Lock()
+	defer s.convL
