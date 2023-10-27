@@ -34,4 +34,5 @@ func (s *MemoryStore) SetConversation(key string, conv *botastic.Conversation) e
 	defer s.convLock.Unlock()
 
 	s.convMap[key] = conv
-	re
+	return nil
+}
