@@ -1,2 +1,2 @@
 # Botastic-PAL9000-Wrapper
-This pr
+This project is a bot wrapper for connecting to 
